@@ -19,6 +19,18 @@ const validCommands = {
   },
   train: {
     function: commands.task,
+  },
+  raid: {
+    function: commands.raid
+  },
+  startraid: {
+    function: commands.startRaid
+  },
+  togglepet: {
+    function: commands.togglePet
+  },
+  togglehelmet: {
+    function: commands.toggleHelmet
   }
 };
 

@@ -1,3 +1,6 @@
+// Reference:
+// https://github.com/zerratar/RavenBot/blob/master/src/RavenBot.Core.Ravenfall/Commands/TrainCommandProcessor.cs
+
 const skills = ["all", "atk", "def", "str", "magic", "ranged", "woodcutting", "fishing", "cooking", "mining", "crafting", "farming"];
 const tasks = ["Woodcutting", "Fishing", "Mining", "Crafting", "Cooking", "Farming", "Fighting"];
 
