@@ -31,7 +31,16 @@ const validCommands = {
   },
   togglehelmet: {
     function: commands.toggleHelmet
-  }
+  },
+  observe: {
+    function: commands.observe
+  },
+  ferryenter: {
+    function: commands.ferryEnter
+  },
+  ferryleave: {
+    function: commands.ferryLeave
+  },
 };
 
 // Define configuration options

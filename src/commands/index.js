@@ -6,3 +6,6 @@ export { default as raid } from './raid';
 export { default as startRaid } from './startRaid';
 export { default as togglePet } from './togglePet';
 export { default as toggleHelmet } from './toggleHelmet';
+export { default as observe } from './observe';
+export { default as ferryEnter } from './ferryEnter';
+export { default as ferryLeave } from './ferryLeave';
