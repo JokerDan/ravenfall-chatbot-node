@@ -1,0 +1,6 @@
+{
+    "prefix": "!",
+    "botUsername": "bot username",
+    "botToken": "oauth:xxxxxxx",
+    "twitchChannel": "twitch channel name"
+}
