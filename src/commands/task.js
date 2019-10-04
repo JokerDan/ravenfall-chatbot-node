@@ -5,7 +5,7 @@ const skills = ["all", "atk", "def", "str", "magic", "ranged", "woodcutting", "f
 const tasks = ["Woodcutting", "Fishing", "Mining", "Crafting", "Cooking", "Farming", "Fighting"];
 
 export default function(ctx) {
-    if (ctx.args[0] == undefined || !skills.includes(ctx.args[0])) {
+    if (ctx.args[0] == undefined) {
         return;
     }
 
