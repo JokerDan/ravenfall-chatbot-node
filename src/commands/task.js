@@ -24,7 +24,7 @@ export default function(ctx) {
     }
 
     ctx.dispatchEvent('task', JSON.stringify(task));
-    ctx.twitchClient.say(ctx.channel, `${ctx.userstate['display-name']} is now training ${choice}!`);
+    // ctx.twitchClient.say(ctx.channel, `${ctx.userstate['display-name']} is now training ${choice}!`);
 }
 
 class Task {
