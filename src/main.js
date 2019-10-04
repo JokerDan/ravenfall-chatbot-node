@@ -41,6 +41,9 @@ const validCommands = {
   ferryleave: {
     function: commands.ferryLeave
   },
+  stats: {
+    function: commands.playerStats
+  },
 };
 
 // Define configuration options
@@ -82,14 +85,18 @@ const netDetails = {
   address: '127.0.0.1',
   port: 4040
 };
-// socket.connect(netDetails.port, netDetails.address, () => {
-//   console.log(`Opening Connection to local game server...`);
-// });
-socket.on('connect', () => console.info(`* Connected to ${netDetails.address}:${netDetails.port}`));
-socket.on('error', (err) => console.error(err));
-socket.on('data', (inf) => console.info(inf));
-socket.on('end', (inf) => console.info(`* Socket ended for ${netDetails.address}:${netDetails.port}`));
-// socket.on('timeout', (inf) => console.info(inf));
+
+socket.connect(netDetails.port, netDetails.address, () => {
+  console.log(`* Opening Connection to local game server...`);
+});
+socket.on('data', (response) => {
+  handleSocketResponse(response.toString());
+});
+
+socket.on('connect',  () => console.info(`* Connected to ${netDetails.address}:${netDetails.port}`));
+socket.on('end',      () => console.info(`* Socket ended for ${netDetails.address}:${netDetails.port}`));
+socket.on('close',    () => console.warn(`* Socket CLOSED for ${netDetails.address}:${netDetails.port}`));
+socket.on('error',    (err) => console.error(err));
 
 // --------------------------------------------------------
 
@@ -131,7 +138,19 @@ class Player {
 }
 
 function dispatchEvent(eventName, data) {
-  socket.connect(netDetails.port, netDetails.address, () => {
-    socket.end(`${eventName}:${data}`);
-  });
+  socket.write(`${eventName}:${data}\n`);
+}
+
+function handleSocketResponse(event) {
+  const [twitchUser, eventName, eventResponse] = event.split(/\||:/);
+  console.log(event.split(/\||:/));
+
+  let msg = '';
+  if (twitchUser != '') {
+    msg += `@${twitchUser} : `;
+  }
+
+  if (config.twitchChannel) {
+    twitchClient.say(config.twitchChannel, `${msg}${eventResponse}`);
+  }
 }
