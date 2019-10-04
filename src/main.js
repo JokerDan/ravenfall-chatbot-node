@@ -47,6 +47,9 @@ const validCommands = {
   res: {
     function: commands.resources
   },
+  traininfo: {
+    function: commands.trainInfo
+  },
 };
 
 // Define configuration options
