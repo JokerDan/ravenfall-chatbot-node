@@ -1,4 +1,10 @@
 export default function(ctx) {
+    // Temporarily allow zerratar to force a raid start for testing :)
+    if (!ctx.player.IsBroadcaster && !ctx.player.username == 'zerratar') {
+        ctx.twitchClient.say(ctx.channel, `Sorry ${ctx.player.Username} but you don't have permission to do this!`);
+        return;
+    }
+
     if (ctx.args[0] == undefined) {
         return;
     }
