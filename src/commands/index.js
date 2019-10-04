@@ -12,3 +12,4 @@ export { default as ferryEnter } from './ferryEnter';
 export { default as ferryLeave } from './ferryLeave';
 export { default as resources } from './resources';
 export { default as trainInfo } from './trainInfo';
+export { default as streamerRaid } from './streamerRaid';

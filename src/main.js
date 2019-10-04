@@ -50,6 +50,9 @@ const validCommands = {
   traininfo: {
     function: commands.trainInfo
   },
+  raidwar: {
+    function: commands.streamerRaid
+  },
 };
 
 // Define configuration options
