@@ -10,3 +10,4 @@ export { default as playerStats } from './playerStats';
 export { default as observe } from './observe';
 export { default as ferryEnter } from './ferryEnter';
 export { default as ferryLeave } from './ferryLeave';
+export { default as resources } from './resources';

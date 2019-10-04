@@ -44,6 +44,9 @@ const validCommands = {
   stats: {
     function: commands.playerStats
   },
+  res: {
+    function: commands.resources
+  },
 };
 
 // Define configuration options
