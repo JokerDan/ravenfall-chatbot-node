@@ -95,9 +95,7 @@ const netDetails = {
   port: 4040
 };
 
-socket.connect(netDetails.port, netDetails.address, () => {
-  console.log(`* Opening Connection to local game server...`);
-});
+openConnection();
 socket.on('data', (response) => {
   handleSocketResponse(response.toString());
 });
@@ -134,6 +132,13 @@ function onConnectedHandler(addr, port) {
   console.log(`* Connected to ${addr}:${port}`);
 }
 
+function openConnection() {
+  socket.connect(netDetails.port, netDetails.address, () => {
+    console.log(`* Opening Connection to local game server...`);
+  });
+  return !socket.pending;
+}
+
 class Player {
   constructor(userstate) {
     this.Username = userstate.username;
@@ -147,7 +152,11 @@ class Player {
 }
 
 function dispatchEvent(eventName, data) {
-  socket.write(`${eventName}:${data}\n`);
+  let openConn = !socket.pending;
+  if (!openConn) {
+    openConn = openConnection();
+  }
+  openConn ? socket.write(`${eventName}:${data}\n`) : console.error('* Game Client Connection Error');
 }
 
 function handleSocketResponse(event) {
