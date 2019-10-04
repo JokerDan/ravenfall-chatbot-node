@@ -39,7 +39,7 @@ Game Website: http://ravenfall.stream
 4. Run `npm run start`
 
 Example `config.json`
-```json
+```js
 {
     // Command prefix for the twitch chat.
     "prefix": "!",
