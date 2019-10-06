@@ -1,4 +1,4 @@
-export { default as streamerRaid } from './streamerRaid';
+import streamerRaid from './streamerRaid';
 
 export default function(ctx) {
 
