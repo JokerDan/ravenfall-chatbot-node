@@ -1,5 +1,4 @@
 export default function(ctx) {
-    console.log(ctx.player)
     if (!ctx.player.IsModerator) {
         ctx.twitchClient.say(ctx.channel, `Sorry ${ctx.player.Username} but you don't have permission to do this!`);
         return;
