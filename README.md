@@ -16,18 +16,40 @@ Game Website: http://ravenfall.stream
 
 **Note:** The '!' is dependant on the prefix in the config, if you change that, your commands will start with that instead.
 
+#### Player Commands
+
+###### Join / Leave
 - `!join` - Joins the game!
 - `!leave`  - Leaves the game!
+
+###### Skills, Training and Raids
+- `!train <skill name>` - Train a skill of your choosing - See skills below.
+- `!traininfo` - Show what you are currently training
+- `!raid` - Join the raid, will you win?!
 - `!stats` - Shows your current stats
 - `!stats <skill>` - Shows information for a specific stat
-- `!raid` - Join the raid, will you win?!
-- `!res` - Show your current resources!
-- `!traininfo` - Show what you are currently training
+- `!res` / `!resources` - Show your current resources!
+
+###### Ferry Commands
+
+- `ferryenter` / `embark` - Get on the boat! - Provide an island name to try and sail!
+- `ferryleave` / `disembark` / `stop` - Get off the boat!
+- `travel <destination>` / `sail <destination>` - See the world, travel to a different island
+
+###### Misc Commands
 - `!togglehelmet` - Toggle your helmet on/off
 - `!togglepet` - Toggle through all of your pets, awwww
-- `!startraid` - (Broadcaster) Start a raid! Raaawr!
-- `!observe <username>` - (Broadcaster) Observe a specific player
-- `!raidwar <username>` - (Broadcaster) Start a raid war against another streamer!
+
+#### Broadcaster / Mod Commands
+
+- `!kick <playername>` - Will attempt to kick the player from the game
+
+###### Camera
+- `!observe <username>` - Observe a specific player
+
+###### Raid Commands
+- `!startraid` - Start an in game boss raid! Raaawr!
+- `!raid <username>` / `!raidwar <username>` - Start a raid war against another streamer!
 
 ---
 

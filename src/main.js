@@ -62,6 +62,9 @@ const validCommands = {
   res: {
     function: commands.resources
   },
+  resources: {
+    function: commands.resources
+  },
   traininfo: {
     function: commands.trainInfo
   },
