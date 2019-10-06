@@ -38,8 +38,23 @@ const validCommands = {
   ferryenter: {
     function: commands.ferryEnter
   },
+  embark: {
+    function: commands.ferryEnter
+  },
   ferryleave: {
     function: commands.ferryLeave
+  },
+  disembark: {
+    function: commands.ferryLeave
+  },
+  stop: {
+    function: commands.ferryLeave
+  },
+  travel: {
+    function: commands.ferryTravel
+  },
+  sail: {
+    function: commands.ferryTravel
   },
   stats: {
     function: commands.playerStats
