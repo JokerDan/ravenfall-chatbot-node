@@ -13,3 +13,4 @@ export { default as ferryLeave } from './ferryLeave';
 export { default as resources } from './resources';
 export { default as trainInfo } from './trainInfo';
 export { default as streamerRaid } from './streamerRaid';
+export { default as kickPlayer } from './kickPlayer';

@@ -53,6 +53,9 @@ const validCommands = {
   raidwar: {
     function: commands.streamerRaid
   },
+  kick: {
+    function: commands.kickPlayer
+  }
 };
 
 // Define configuration options
