@@ -9,11 +9,12 @@ export default function(ctx) {
         return;
     }
     const streamerRaid = new StreamerRaid(
-        ctx.player,
+        Object.create(ctx.player),
         true
     );
-    streamerRaid.Player.username = ctx.args[0];
+    streamerRaid.Player.Username = ctx.args[0];
     streamerRaid.Player.DisplayName = ctx.args[0];
+
     ctx.dispatchEvent('raid_streamer', JSON.stringify(streamerRaid, true));
 }
 
